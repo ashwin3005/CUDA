@@ -17,7 +17,7 @@ int main(){
     float *A_d, *B_d, *result_d;      // pointers for the vectors in the device (we will allocate the memory in the GPU)
 
     // Dynamic memory allocation for the vectors on the host
-    A_h = (float*)malloc(n * sizeof(float));
+    A_h = (float*)malloc(n * sizeof(float));   // necessary to cast
     B_h = (float*)malloc(n * sizeof(float));
     result_h = (float*)malloc(n * sizeof(float));
 
@@ -36,8 +36,11 @@ int main(){
     cudaMemcpy(A_d, A_h, n * sizeof(float), cudaMemcpyHostToDevice);
     cudaMemcpy(B_d, B_h, n * sizeof(float), cudaMemcpyHostToDevice);
 
+    int block_size = 1024;  // number of threads :)   (max limit is 1024)
+    int grid_size = (n/block_size) + 1;   // calcualate number of blocks
+
     // Launch the kernel
-    vectorAdd<<<1, 12>>>(A_d, B_d, result_d, n);   // I have used 1 block and 12 threads here
+    vectorAdd<<<grid_size, block_size>>>(A_d, B_d, result_d, n);   
 
     // copy the result vector to the host from the device
     cudaMemcpy(result_h, result_d, n * sizeof(float), cudaMemcpyDeviceToHost);
@@ -55,6 +58,6 @@ int main(){
     cudaFree(A_d);
     cudaFree(B_d);
     cudaFree(result_d);
-    
+
     return 0;
 }
