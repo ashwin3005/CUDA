@@ -6,7 +6,9 @@
 // simple CUDA kernel for vector addition
 __global__ void vectorAdd(float *A, float *B, float *C, int n){
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    C[idx] = A[idx] + B[idx];
+    if (idx < n){
+        C[idx] = A[idx] + B[idx];
+    }
 }
 
 int main(){
