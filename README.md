@@ -12,6 +12,8 @@ The objective is to learn Parallel programming.
 |-----------|-----|--------------|
 | Day 0     | Chapter 01 from PMPP  | 🔗 [Notes](./Day-0/Notes.md)    |
 | Day 1     | Chapter 02 from PMPP  | 🔗 [Notes](./Day-1/Notes.md)    |
+| Day 2     | More on blocks and grids  | 🔗 [Notes](./Day-2/Notes.md)    |
+| Day 3     | Multi-dimensional grids | 🔗 [Notes](./Day-3/Notes.md)    |
 
 
 
