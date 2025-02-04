@@ -14,7 +14,8 @@ The objective is to learn Parallel programming.
 | Day 1     | Chapter 02 from PMPP  | 🔗 [Notes](./Day-1/Notes.md)    |
 | Day 2     | More on blocks and grids  | 🔗 [Notes](./Day-2/Notes.md)    |
 | Day 3     | Multi-dimensional grids | 🔗 [Notes](./Day-3/Notes.md)    |
-
+| Day 4     | Matrix mutiplication C | 🔗 [code](./Day-4/matmul.c)    |
+| Day 5     | Matrix multiplication CUDA C| 🔗 [Notes](./Day-5/Notes.md)    |
 
 
 
