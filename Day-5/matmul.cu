@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <cuda_runtime.h>
 
 __global__ void matMul(int *A, int *B, int *C, int width){
@@ -23,6 +24,8 @@ int main(){
     int cols = 3; // width
     int width = rows; // we are using square matrix :)
 
+    srand(time(NULL));  // seeding the rand() with time
+
     // memory allocation for the host
     int *A = (int*)malloc(rows * cols * sizeof(int));
     int *B = (int*)malloc(rows * cols * sizeof(int));
@@ -31,8 +34,8 @@ int main(){
     // Assign values to A and B
     for(int i = 0; i < rows; i++){
         for(int j = 0; j < cols; j++){
-            A[i * cols + j] = i + 4 * j + 11;
-            B[i * cols + j] = 2 * i + 3 * j + 7;
+            A[i * cols + j] = (rand()%10) + 1;    // initialise with a random number between 1 to 10
+            B[i * cols + j] = (rand()%10) + 1;
         }
     }
 
@@ -53,7 +56,7 @@ int main(){
     cudaMemcpy(d_B, B, rows * cols * sizeof(int), cudaMemcpyHostToDevice);
 
     // Define block and grid sizes
-    dim3 blockSize(16, 16, 1);  // 16x16 block size
+    dim3 blockSize(16, 16, 1);  // 16x16 block size  
     dim3 gridSize((cols + blockSize.x - 1) / blockSize.x, (rows + blockSize.y - 1) / blockSize.y, 1); // grid size
 
     // kernel launch
