@@ -16,6 +16,7 @@ The objective is to learn Parallel programming.
 | Day 3     | Multi-dimensional grids | 🔗 [Notes](./Day-3/Notes.md)    |
 | Day 4     | Matrix mutiplication C | 🔗 [code](./Day-4/matmul.c)    |
 | Day 5     | Matrix multiplication CUDA C| 🔗 [Notes](./Day-5/Notes.md)    |
+| Day 6     | Compute architecture (ch 4) and ReLU implementation| 🔗 [Notes](./Day-6/Notes.md) \|  [ReLU kernel](./Day-6/Relu.cu)  |
 
 
 
