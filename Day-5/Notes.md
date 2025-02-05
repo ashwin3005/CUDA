@@ -21,3 +21,5 @@ CUDA supports multidimensional grids (Up to 3D)
 
 ---
 While writing parallel programs be careful on **indexing** and **boundry checks**
+
+I have refered [this](https://www.youtube.com/watch?v=ovAB0jf8QGg) lecture to understand matmul.
