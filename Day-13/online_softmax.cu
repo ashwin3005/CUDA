@@ -10,6 +10,7 @@ reference: https://arxiv.org/pdf/1805.02867 (Online normalizer calculation for s
 __global__ void onlineSoftMax(float *logits, float *results, int N, int K){
     int row = blockDim.x * blockIdx.x + threadIdx.x;
 
+    if(row < N){
     float n_max = -INFINITY;
     float norm = 0.0f;
     // pass 1
@@ -24,6 +25,7 @@ __global__ void onlineSoftMax(float *logits, float *results, int N, int K){
     // 2nd pass
     for(int i=0; i<K; i++){
         results[row*K+i] = exp(logits[row*K+i]-n_max)/ norm;
+    }
     }
 }
 
