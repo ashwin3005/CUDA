@@ -21,6 +21,10 @@ The objective is to learn Parallel programming.
 |  8     | Tiled Matmul (using the shared memory)| 🔗 [Tiled matmul kernel](./Day-8/tiled_matmul.cu)|
 |  9     | Tanh activation function| 🔗 [tanh kernel](./Day-9/tanh.cu)|
 |  10     | PTX & LLVM | 🔗 [Notes](./Day-10/Notes.md)|
+|  11     | Sigmoid kernel | 🔗 [Notes](./Day-11/Notes.md)|
+|  12     | Chapter 06 from PPMP | 🔗 [Notes](./Day-12/Notes.md)|
+|  13     | Naive and Online softmax | 🔗 [Notes](./Day-13/Notes.md)|
+|  14     | PTX & LLVM | 🔗 [Notes](./Day-14/Notes.md)|
 
 
 
