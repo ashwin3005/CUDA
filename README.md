@@ -25,8 +25,12 @@ The objective is to learn Parallel programming.
 |  12     | Chapter 06 from PPMP | 🔗 [Notes](./Day-12/Notes.md)|
 |  13     | Naive and Online softmax | 🔗 [Notes](./Day-13/Notes.md)|
 |  14     |  | 🔗 [Notes](./Day-14/Notes.md)|
-|  1S     | simple sigmoid kernel | 🔗 [Notes](./Day-15/Notes.md)|
-
+|  15     | simple sigmoid kernel | |
+|  16     |  | |
+|  17     |  | |
+|  18     |  | |
+|  19     |  | |
+|  20     |  | |
 
 ## **Resources**
 - ### Books
