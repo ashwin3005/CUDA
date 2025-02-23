@@ -31,6 +31,8 @@ The objective is to learn Parallel programming.
 |  18     |  | |
 |  19     |  | |
 |  20     |  | |
+|  21     |  | |
+
 
 ## **Resources**
 - ### Books
